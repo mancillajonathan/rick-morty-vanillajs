@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Rick & Morty Characters</title>
   <link rel="stylesheet" href="./static/css/styles.css">
 </head>
 
@@ -18,13 +17,13 @@
     </span>
     <img class="logo" src="./static/img/rm.svg" width="280" alt="">
     <div class="social">
-      <a href="https://instagram.com/LeonidasEsteban">
+      <a href="https://instagram.com/mancilla_jona" target="_blank">
         <img src="./static/img/instagram.svg" alt="">
       </a>
-      <a href="https://facebook.com/LeonidasEsteban">
+      <a href="https://facebook.com/mancillajonathan" target="_blank">
         <img src="./static/img/facebook.svg" alt="">
       </a>
-      <a href="https://twitter.com/LeonidasEsteban">
+      <a href="https://twitter.com/mancillajona" target="_blank">
         <img src="./static/img/twitter.svg" alt="">
       </a>
     </div>
@@ -32,25 +31,17 @@
       <a href="#">Name</a>
     </div>
     <div id="character-name-container" class="character-name-container">
-      <div class="character-name">
-        <h2>Rick Sanchez</h2>
-      </div>
     </div>
 
     <div id="character-image-container" class="character-image-container">
-      <img class="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+      <!-- <img class="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt=""> -->
     </div>
     <div class="navigation about">
       <a href="#">About</a>
     </div>
 
 
-    <div class="character-description-container">
-      <div class="character-labels">
-        <h3 class="character-label">Género: asdsadas</h3>
-        <h3 class="character-label">Especie: aasdas </h3>
-        <h3 class="character-label">Status: asdasda</h3>
-      </div>
+    <div id="character-description-container" class="character-description-container">
     </div>
     <span class="asset bottom">
       <span class="line"></span>
@@ -64,11 +55,10 @@
       <span>learn more</span>
     </div>
 
-    <div class="arrow"></div>
+    <div class="arrow" id="load-next"></div>
 
   </div>
 
   <script type="module" src="static/js/app.js"></script>
 </body>
-
 </html>
