@@ -9,6 +9,7 @@ export default class Character {
       this.$characterContainer = document.querySelector('#character-image-container');
       this.$characterDescriptionContainer = document.querySelector('#character-description-container');
       this.$characterNameContainer = document.querySelector('#character-name-container');
+      this.$characterNamePlaceholder = document.querySelector('#name-placeholder');
       this.render();
     }
 
@@ -40,5 +41,6 @@ export default class Character {
       this.$characterContainer.innerHTML = this.buildImage();
       this.$characterNameContainer.innerHTML = this.buildName();
       this.$characterDescriptionContainer.innerHTML = this.buildDescription();
+      this.$characterNamePlaceholder.innerHTML = "Rick and Morty";
     }
 }

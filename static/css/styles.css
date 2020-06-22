@@ -5,7 +5,13 @@ body {
     margin: 0;
     background: #00a5be;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-image: url('../img/asset-red.svg');
+    background-position: left 200px top;
+    background-repeat: no-repeat;
 }
+
+
   
 .logo {
   grid-area: logo;
@@ -14,6 +20,8 @@ body {
 }
 
 .grid {
+  position: relative;
+  z-index: 2;
   display: grid;
   height: calc(100vh - 8em);
   padding: 4em;
@@ -33,6 +41,7 @@ body {
     text-decoration: none;
 }
 .arrow {
+  user-select: none;
   grid-area: arrow;
   background-image: url('../img/arrow.svg');
   background-repeat: no-repeat;
@@ -66,6 +75,33 @@ body {
   grid-area: asset-bottom;
   justify-content: flex-end;
 }
+.placeholder-container {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;  
+}
+
+.character-name-placeholder {
+  color: rgba(247, 57, 28, .11);  
+  font-size: 300px;
+  font-family: "Oswald";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; 
+  line-height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  z-index: 1;
+  white-space: nowrap;
+}
+
 .navigation {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -153,8 +189,9 @@ body {
 }
 
 .character-name {
-  
   font-size: 30px;
+  text-align: center;
+  position: relative;
 }
 
 .character-name h2:after {
@@ -163,7 +200,7 @@ body {
   height: 6px;
   background-color: #F7391C;
   display: inline-flex;
-  /* position: absolute; */
+  position: absolute;
   left: calc(100% + 5px);
   top: 50%;
 }  
@@ -172,6 +209,7 @@ body {
       grid-column-gap: 2em;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .grid {
       height: auto;
@@ -183,6 +221,9 @@ body {
       grid-template-rows: repeat(6, auto); 
       grid-template-areas: "logo logo logo" ". avatar avatar" "name character-name character-name" "about character-description character-description" "arrow arrow arrow" "social social social";
       
+  }
+  body {
+    background-position: left 50px top;
   }
   .asset {
       display: none;
@@ -201,6 +242,11 @@ body {
       text-align: center;
       justify-content: center;
   }
+  .character-name h2::after {
+    left: 0;
+    top: calc(100% - 20px);
+  }
+
   .character-name-container {
       justify-content: center;
       margin-top: 1em;
